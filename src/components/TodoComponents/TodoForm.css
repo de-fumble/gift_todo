@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&display=swap");
+
+.body {
+  max-width: 1200px;
+}
+.today-task {
+  max-width: fit-content;
+  max-height: fit-content;
+  padding-left: 550px; /* Leaves space for the sidebar */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Main Content Adjustments */
+.today-task-header {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+
+.main-focus {
+  font-family: "Oswald", sans-serif;
+  color: azure;
+  font-size: 35px;
+  margin-bottom: 0;
+}
+
+.responsive-header {
+  font-family: "Oswald", sans-serif;
+  color: azure;
+  font-size: 50px;
+  margin-top: -20px;
+}
+
+.TodoForm {
+  max-width: 600px;
+  height: 90px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 50px;
+  margin-bottom: 80px;
+}
+
+.task-assigner {
+  padding: 20px;
+  padding-top: 25px;
+  font-size: 25px;
+}
+
+.todo-input {
+  outline: none;
+  background: none;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  padding-right: 480px;
+}
+
+.todo-input::placeholder {
+  color: #ede4e4;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.today-task form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  right: 50px;
+  font-size: 25px;
+  color: #a18aff;
+}
+
+.clock-icon {
+  margin-right: 10px;
+}
+
+/* Media Queries */
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .today-task {
+    padding-left: 150px; /* Reduced padding for smaller screens */
+    padding-top: 300px;
+  }
+
+  .main-focus {
+    font-size: 28px;
+  }
+
+  .responsive-header {
+    font-size: 40px;
+  }
+
+  .todo-input {
+    width: 250px;
+    padding-right: 300px;
+  }
+}
+
+/* Mobile Landscape (600px and below) */
+@media screen and (max-width: 600px) {
+  .today-task {
+    padding-left: 100px;
+    padding-top: 300px;
+  }
+
+  .main-focus {
+    font-size: 25px;
+  }
+
+  .responsive-header {
+    font-size: 35px;
+  }
+
+  .todo-input {
+    width: 220px;
+    padding-right: 200px;
+  }
+
+  .input-icon {
+    right: 30px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media screen and (max-width: 480px) {
+  .today-task {
+    margin-right: 200px;
+    padding-top: 500px;
+    gap: 10px;
+  }
+
+  .main-focus {
+    font-size: 50px;
+  }
+
+  .responsive-header {
+    font-size: 33px;
+  }
+
+  .TodoForm {
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 40px;
+  }
+
+  .todo-input {
+    width: 200px;
+    padding-right: 20px;
+  }
+
+  .input-icon {
+    right: 20px;
+  }
+
+  .task-assigner {
+    font-size: 18px;
+  }
+}

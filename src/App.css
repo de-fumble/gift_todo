@@ -1,0 +1,44 @@
+#root {
+  max-width: 1280px;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar takes 250px, the rest goes to Main */
+  gap: 10px; /* Adds spacing between sidebar and main content */
+}
+
+body {
+  background-color:rgba(15, 6, 6, 0.801) ;
+  max-width: 1200px;
+  max-height: fit-content;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Media Queries */
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px) {
+  .app-container {
+    grid-template-columns: 200px 1fr; /* Shrink sidebar for smaller screens */
+  }
+}
+
+/* Mobile Landscape (600px and below) */
+@media screen and (max-width: 600px) {
+  .app-container {
+    grid-template-columns: 150px 1fr; /* Further shrink sidebar */
+    gap: 5px;
+  }
+}
+
+/* Mobile Portrait (480px and below) */
+@media screen and (max-width: 480px) {
+  .app-container {
+    grid-template-columns: 1fr; /* Stack sidebar and main content vertically */
+    grid-template-rows: 80px 1fr; /* Sidebar at the top */
+    height: auto; /* Adjust height for stacked layout */
+  }
+}
